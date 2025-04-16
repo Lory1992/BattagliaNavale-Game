@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battaglia Navale</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #61dafb;
+            margin-bottom: 20px;
+        }
+
+        #startButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #61dafb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #startButton:hover {
+            background-color: #4caf50;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 40px);
+            gap: 5px;
+        }
+
+        button.cell {
+            width: 40px;
+            height: 40px;
+            background-color: #61dafb;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button.cell.hit {
+            background-color: red;
+        }
+
+        button.cell.miss {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Battaglia Navale</h1>
+    <button id="startButton">Inizia</button>
+    <div id="gameGrid" class="grid" style="display:none;"></div>
+    <script src="battaglia.js"></script>
+</body>
+</html>
